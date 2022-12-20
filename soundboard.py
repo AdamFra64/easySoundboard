@@ -30,10 +30,10 @@ listener.start()
 listener.join()
 
 # find path of right sound
-soundToPlay = "/sounds/" + jsonDict.get("sound" + keyPressed, None)
+soundToPlay = soundboardLocation + "/sounds/" + jsonDict.get("sound" + keyPressed, None)
 
 # if the sound exists, play it. otherwise, say that it doesn't exist.
-if soundToPlay != None and os.path.exists(soundToPlay):
+if soundToPlay != None:
     playsound(soundToPlay)
 else:
     print("sound" + keyPressed + " does not exist!")
